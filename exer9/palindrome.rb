@@ -13,6 +13,6 @@ end
 class String
     include Pal
 end
-class Numeric
+class Array
     include Pal
 end
