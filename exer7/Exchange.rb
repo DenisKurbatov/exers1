@@ -2,7 +2,6 @@ class Numeric
     Rate = {euro:43.61, dollar:32.26, ruble:1}
     def method_missing (met)    
         currency = met.to_s.delete('s').to_sym
-        p currency
         if Rate.key?(currency)
             self * Rate[currency]
         end
