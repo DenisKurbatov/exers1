@@ -2,10 +2,7 @@ require "test/unit"
 require_relative "AttrWithHistory.rb"
 
 class AttrWithHistory_test < Test::Unit::TestCase
-    class Foo
-        attr_accessor_with_history :bar
-        attr_accessor_with_history "foo"
-    end
+    
     def test_01_symbol
         f = Foo.new
         f.bar=2
