@@ -1,10 +1,8 @@
 module Pal
     def palindrome?
         if self.is_a? String
-            array = (97..122).to_a
-            str = ""
-            self.downcase.each_byte {|s| str << s if array.include?(s)}
-            str == str.reverse
+            str = self.gsub(/[^A-Za-z]/, "").downcase
+            str==str.reverse
         else
             self == self.reverse
         end
