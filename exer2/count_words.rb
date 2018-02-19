@@ -1,7 +1,4 @@
 def count_words(string)
-  str = string.delete "?!,.-"
-  array = str.downcase.split(" ")
-  hash = Hash.new(0)
-  array.each { |e| hash[e] += 1  }
-  hash
+  array = string.gsub(/[^A-Za-z]/, " ").downcase.split(" ")
+  array.inject(Hash.new(0)) {|hash, k| hash[k] += 1; hash}
 end
