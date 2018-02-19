@@ -1,6 +1,4 @@
 def palindrome?(string)
-    array = (97..122).to_a
-    str = ""
-    string.downcase.each_byte {|s| str << s if array.include?(s)}
+    str = string.gsub(/[^A-Za-z]/, "").downcase
     str == str.reverse
 end
