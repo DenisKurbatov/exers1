@@ -1,19 +1,8 @@
 class Dessert
 
+    attr_accessor :name, :colories
     def initialize (name, colories)
         @name = name
-        @colories = colories
-    end
-    def get_name
-        @name
-    end
-    def get_colories
-        @colories
-    end
-    def set_name= (name)
-        @name = name
-    end
-    def set_colories= (colories)
         @colories = colories
     end
 
